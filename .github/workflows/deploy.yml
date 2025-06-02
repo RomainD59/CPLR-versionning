@@ -2,7 +2,7 @@ name: Deploiement formulaire
 on:
    push:
         branches:
-        - master (ou main)
+        - master
 jobs:
     deploy:
         runs-on: ubuntu-latest
