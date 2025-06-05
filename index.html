@@ -3,33 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <title>Formulaire de contact</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f0f0;
+      color: #333;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #f1c40f;
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #f1c40f;
+      color: #333;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #d4ac0d;
+    }
+  </style>
 </head>
 <body>
   <h2>Formulaire de contact</h2>
   <form action="https://n8n.oriatec.fr/webhook-test/072d9fd1-ae5a-4912-84b4-62f979f75ec7" method="post">
-    <label for="name">Nom :</label><br>
-    <input type="text" id="name" name="name" required><br><br>
- 
-    <label for="firstname">Prénom :</label><br>
-    <input type="text" id="firstname" name="firstname" required><br><br>
- 
-    <label for="email">Email :</label><br>
-    <input type="email" id="email" name="email" required><br><br>
- 
-    <label for="phone">Numéro :</label><br>
-    <input type="tel" id="phone" name="phone" required><br><br>
- 
-    <label for="service">Choisissez un service :</label><br>
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="firstname">Prénom :</label>
+    <input type="text" id="firstname" name="firstname" required>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Numéro :</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="service">Choisissez un service :</label>
     <select id="service" name="service" required>
       <option value="">-- Sélectionnez un service --</option>
       <option value="commercial">Commercial</option>
       <option value="technique">Technique</option>
       <option value="autres">Autres</option>
-    </select><br><br>
- 
-    <label for="message">Message :</label><br>
-    <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
- 
+    </select>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
     <input type="submit" value="Envoyer">
   </form>
 </body>
